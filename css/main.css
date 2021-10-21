@@ -101,38 +101,55 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 2em;
   font-size: 1.25em;
-  height: 100%;
+
   background-color: darkslategrey;
+  color: #fff;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
+header main footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  border-bottom: 1px solid white;
+}
+
+header footer {
+  height: 4em;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.div-1,
-.div-2,
-.div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: whitesmoke;
-  line-height: 1.5em;
-  font-size: 0.8em;
-
-  height: 250px;
+.flex-items {
   display: flex;
-  width: 30%;
   justify-content: center;
+  border-bottom: 0.1px solid #555;
+  padding: 0.5em 0;
 }
 
-.div-2 {
-  border-right: 1px solid lightgrey;
-  border-left: 1px solid lightgrey;
-  padding: 0 1.2em;
+.div-3 {
+  border-bottom: none;
+}
+
+footer {
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+
+footer i {
+  padding: 30px 20px 0 0;
 }
 
 /* ==========================================================================
@@ -207,6 +224,22 @@ body {
 
 .clearfix:after {
   clear: both;
+}
+
+@media screen and (min-width: 1200px) {
+  .flex-items {
+    width: 30%;
+  }
+
+  .flex-container {
+    justify-content: space-between;
+  }
+
+  .div-2 {
+    border-right: 1px solid #555;
+    border-left: 1px solid #555;
+    padding: 0.5em 1em;
+  }
 }
 
 /* ==========================================================================
